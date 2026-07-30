@@ -1,0 +1,12 @@
+{
+  "watch": [
+    "src"
+  ],
+  "ignore": [
+    "workspace",
+    "node_modules",
+    "cloud-workspace",
+    ".git"
+  ],
+  "ext": "js,json"
+}
