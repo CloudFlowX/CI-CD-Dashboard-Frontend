@@ -240,8 +240,8 @@ export default function AuditLogsPage() {
   // Summary Metrics
   const totalEntriesCount = 234;
   const filteredCount = filteredLogs.length;
-  const failedCount = INITIAL_AUDIT_LOGS.filter((l) => l.status === 'Failed').length;
-  const deployCount = INITIAL_AUDIT_LOGS.filter((l) => l.action === 'Deploy').length;
+  const failedCount = auditLogs.filter((l) => l.status === 'Failed').length;
+  const deployCount = auditLogs.filter((l) => l.action === 'Deploy').length;
 
   return (
     <div className="audit-logs-container">
@@ -487,7 +487,7 @@ export default function AuditLogsPage() {
       {/* Filter Status summary */}
       <div className="audit-results-bar">
         <span className="results-count">
-          Showing <strong>{filteredLogs.length}</strong> of <strong>{INITIAL_AUDIT_LOGS.length}</strong> log entries
+          Showing <strong>{filteredLogs.length}</strong> of <strong>{auditLogs.length}</strong> log entries
         </span>
         {hasActiveFilters && <span className="active-filter-badge">Filters Active</span>}
       </div>
