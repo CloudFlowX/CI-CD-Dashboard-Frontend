@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: cloud-orchestrator-deployment
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: cloud-orchestrator
+
+  template:
+    metadata:
+      labels:
+        app: cloud-orchestrator
+
+    spec:
+      containers:
+        - name: cloud-orchestrator-container
+          image: cloud-orchestrator-updated:latest
+          imagePullPolicy: IfNotPresent
+
+          ports:
+            - containerPort: 5002
+
+          env:
+            - name: NODE_ENV
+              value: "production"

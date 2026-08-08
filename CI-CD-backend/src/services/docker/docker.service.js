@@ -1,0 +1,7 @@
+buildDockerImage()
+runDockerContainer()
+stopDockerContainer()
+removeDockerContainer()
+getDockerLogs()
+listDockerContainers()
+listDockerImages()

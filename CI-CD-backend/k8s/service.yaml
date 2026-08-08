@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: cloud-orchestrator-service
+
+spec:
+  selector:
+    app: cloud-orchestrator
+
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 5002
+
+  type: NodePort
